@@ -11990,17 +11990,6 @@ print('Total score (averaged over agents) this episode: {}'.format(np.mean(score
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="4.-It's-Your-Turn!">4. It's Your Turn!<a class="anchor-link" href="#4.-It's-Your-Turn!">&#182;</a></h3><p>Now it's your turn to train your own agent to solve the environment!  When training the environment, set <code>train_mode=True</code>, so that the line for resetting the environment looks like the following:</p>
-<div class="highlight"><pre><span></span><span class="n">env_info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">train_mode</span><span class="o">=</span><span class="bp">True</span><span class="p">)[</span><span class="n">brain_name</span><span class="p">]</span>
-</pre></div>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
@@ -12014,7 +12003,7 @@ print('Total score (averaged over agents) this episode: {}'.format(np.mean(score
 <span class="o">%</span><span class="k">matplotlib</span> inline
 
 <span class="c1"># initialize the agent and the environment</span>
-<span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">state_size</span><span class="o">=</span><span class="n">state_size</span><span class="p">,</span> <span class="n">action_size</span><span class="o">=</span><span class="n">action_size</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span><span class="n">state_size</span><span class="o">=</span><span class="n">state_size</span><span class="p">,</span> <span class="n">action_size</span><span class="o">=</span><span class="n">action_size</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="c1">#random_seed=10</span>
 </pre></div>
 
 </div>
@@ -12027,7 +12016,7 @@ print('Total score (averaged over agents) this episode: {}'.format(np.mean(score
 <div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ddpg</span><span class="p">(</span><span class="n">n_episodes</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">max_t</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ddpg</span><span class="p">(</span><span class="n">n_episodes</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">max_t</span><span class="o">=</span><span class="mi">1000</span><span class="p">):</span>
     <span class="n">scores_deque</span> <span class="o">=</span> <span class="n">deque</span><span class="p">(</span><span class="n">maxlen</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
     <span class="n">scores_list</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">max_score</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">Inf</span>
@@ -12179,6 +12168,17 @@ Environment solved in 318 episodes!	Average Score: 31.05
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4.-It's-Your-Turn!">4. It's Your Turn!<a class="anchor-link" href="#4.-It's-Your-Turn!">&#182;</a></h3><p>Now it's your turn to train your own agent to solve the environment!  When training the environment, set <code>train_mode=True</code>, so that the line for resetting the environment looks like the following:</p>
+<div class="highlight"><pre><span></span><span class="n">env_info</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">train_mode</span><span class="o">=</span><span class="bp">True</span><span class="p">)[</span><span class="n">brain_name</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
 </div>
     </div>
   </div>
